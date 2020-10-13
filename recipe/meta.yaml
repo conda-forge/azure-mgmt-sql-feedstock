@@ -1,5 +1,5 @@
 {% set name = "azure-mgmt-sql" %}
-{% set version = "0.18.0" %}
+{% set version = "0.22.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: 99ca085eb523a5c27933060ccb04d7a6b60864f98d87bf5b63ac17d419b43445
-  
+  sha256: 01c82a1559f49e5f51021b8fbd35e738e08cbede1f39cf00da8085c853575f39
+
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -35,7 +35,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: 'Microsoft Azure SQL Management Client Library for Python'
+  summary: Microsoft Azure SQL Management Client Library for Python
 
 
 extra:
