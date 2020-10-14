@@ -5,11 +5,9 @@ Home: https://github.com/Azure/azure-sdk-for-python
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/azure-mgmt-sql-feedstock/blob/master/LICENSE.txt)
 
 Summary: Microsoft Azure SQL Management Client Library for Python
-
-
 
 Current build status
 ====================
