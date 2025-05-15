@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: azure-mgmt-sql
-  version: 0.24.0
+  version: 3.0.1
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.zip
-  sha256: da391ed00d82cd8e20ca50affdc43b99fd9a7919b54a3a0d53c73cb41eea09d3
+  sha256: 129042cc011225e27aee6ef2697d585fa5722e5d1aeb0038af6ad2451a285457
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
@@ -24,9 +24,9 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }}
-    - msrest >=0.5.0
-    - msrestazure >=0.4.32,<2.0.0
-    - azure-common >=1.1,<2.0
+    - azure-common >=1.1,<2
+    - azure-mgmt-core >=1.2.0,<2.0.0
+    - msrest >=0.6.21
 
 tests:
   - python:
